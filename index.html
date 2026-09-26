@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>UpStep</title>
+    <meta
+      name="description"
+      content="The last chorus, a step higher. Live instrument chairs for the key change a song never got."
+    />
+    <meta name="theme-color" content="#f4efe6" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231c1916'/%3E%3Cpath d='M7 23h7V16h7V9h5' fill='none' stroke='%23f4efe6' stroke-width='2.4'/%3E%3Ccircle cx='26' cy='9' r='2.1' fill='%23c2410c'/%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,640&family=Outfit:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <p class="eyebrow">Finisher · live chairs</p>
+        <div class="title-row">
+          <div>
+            <h1>UpStep</h1>
+            <p class="lede">
+              The last chorus, a step higher. Live piano, upright, guitar, trumpet, and violin so the song
+              does not end where it started.
+            </p>
+          </div>
+          <p class="badge" id="badge">C major → D major</p>
+        </div>
+      </header>
+
+      <section>
+        <h2>The chorus you already have</h2>
+        <div class="grid songs" id="songs"></div>
+      </section>
+
+      <section>
+        <h2>How it steps up</h2>
+        <div class="grid recipes" id="recipes"></div>
+      </section>
+
+      <section>
+        <div class="bar-head">
+          <h2>Ten bars</h2>
+          <p id="status">Live chairs wait for the first downbeat</p>
+        </div>
+        <ol class="bars" id="bars"></ol>
+        <div class="transport">
+          <button id="play-home" type="button">Hear the chorus</button>
+          <button id="play-step" type="button">Hear the step</button>
+          <button id="play-hand" class="primary" type="button">Play the handoff</button>
+          <button id="stop" type="button">Stop</button>
+        </div>
+        <p class="hint">Space plays the handoff. The trumpet only enters on the pivot.</p>
+      </section>
+
+      <section class="punch-card">
+        <div class="bar-head">
+          <h2>Session punch list</h2>
+          <button id="copy" type="button">Copy</button>
+        </div>
+        <pre id="punch"></pre>
+      </section>
+    </main>
+    <script src="./app.js"></script>
+  </body>
+</html>

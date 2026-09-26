@@ -1,0 +1,58 @@
+:root {
+  --paper: #f4efe6;
+  --ink: #1c1916;
+  --mute: #6f675e;
+  --rule: #e4d9cc;
+  --card: #fbf7f1;
+  --copper: #9a3412;
+  --copper-soft: #f3e6d8;
+  --sans: "Outfit", "Avenir Next", system-ui, sans-serif;
+  --display: "Fraunces", Georgia, serif;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); }
+button { font: inherit; color: inherit; cursor: pointer; }
+h1, h2, p { margin: 0; }
+main { max-width: 64rem; margin: 0 auto; padding: 1.5rem 1rem 3rem; display: flex; flex-direction: column; gap: 2rem; }
+header { border-bottom: 1px solid var(--rule); padding-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; }
+.eyebrow { font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--mute); font-weight: 500; }
+h1 { font-family: var(--display); font-size: clamp(2.4rem, 6vw, 3.2rem); font-weight: 560; letter-spacing: -0.03em; }
+h2 { font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--mute); font-weight: 500; margin-bottom: 0.75rem; }
+.lede { margin-top: 0.5rem; max-width: 38rem; color: var(--mute); line-height: 1.5; }
+.title-row, .bar-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; align-items: flex-end; }
+.badge, .card, .bar, .punch-card, .transport button, #copy {
+  border: 1px solid var(--rule);
+  background: var(--card);
+  border-radius: 0.9rem;
+}
+.badge { border-radius: 999px; padding: 0.5rem 0.8rem; font-size: 0.9rem; }
+.grid { display: grid; gap: 0.75rem; }
+.songs { grid-template-columns: 1fr; }
+.recipes { grid-template-columns: 1fr; }
+@media (min-width: 720px) {
+  .songs { grid-template-columns: repeat(3, 1fr); }
+  .recipes { grid-template-columns: 1fr 1fr; }
+  main { padding: 2.5rem 1.5rem 4rem; }
+}
+.card { text-align: left; padding: 0.85rem 1rem; min-height: 2.75rem; display: flex; flex-direction: column; gap: 0.25rem; }
+.card b { font-family: var(--display); font-size: 1.15rem; font-weight: 560; }
+.recipes .card b { font-family: var(--sans); font-size: 1rem; font-weight: 600; }
+.card em { font-style: normal; color: var(--mute); font-weight: 400; margin-left: 0.35rem; }
+.card span { color: var(--mute); font-size: 0.92rem; line-height: 1.4; }
+.card.on { border-color: var(--copper); background: var(--copper-soft); }
+.bars { list-style: none; padding: 0; margin: 0.25rem 0 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.5rem; }
+@media (min-width: 720px) { .bars { grid-template-columns: repeat(10, 1fr); } }
+.bar { min-height: 5rem; padding: 0.45rem 0.4rem; display: flex; flex-direction: column; justify-content: space-between; }
+.bar span { font-size: 0.72rem; color: var(--mute); }
+.bar strong { font-family: var(--display); font-size: 1.25rem; }
+.bar.pivot { border-color: var(--copper); background: var(--copper-soft); }
+.bar.active { background: var(--copper); border-color: var(--copper); color: var(--paper); }
+.bar.active span { color: var(--paper); }
+#status, .hint { color: var(--mute); font-size: 0.92rem; }
+.transport { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+.transport button, #copy { border-radius: 999px; min-height: 2.75rem; padding: 0 1rem; background: var(--card); }
+.transport .primary { background: var(--copper); color: var(--paper); border-color: var(--copper); }
+.punch-card { padding: 1rem; }
+.punch-card h2 { margin: 0; }
+#punch { white-space: pre-wrap; font-family: var(--sans); font-size: 0.95rem; line-height: 1.55; margin: 0.8rem 0 0; }
